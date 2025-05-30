@@ -34,7 +34,7 @@ class Person {
         return "Name: "+name+"\nAge: "+age;
     }
 }
-class Student extends Person{
+class Student extends Person {
     private static int counter =1;
     private int studentI;
     public Student(String name,int age){
