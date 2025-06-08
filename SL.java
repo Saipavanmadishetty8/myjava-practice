@@ -1,6 +1,22 @@
+import java.util.*;
 public class SL {
+    public static int[] cArray(Scanner sc, int n){
+        int[] arr = new int[n];
+        for(int i =0;i<n;i++){
+            arr[i]=sc.nextInt();
+        }
+
+        return arr;
+    }
+    public static void pArray(int[] x){
+        for(int i=0;i<x.length;i++){
+            System.out.println(x[i]);
+        }
+    }
     public static void main(String[] args){
-        int[] arr = {10, 20, 4, 45, 99, 99, 23};
+        Scanner sc = new Scanner(System.in);
+        int x = sc.nextInt();
+        int[] arr = cArray(sc,x);
         int l1 = Integer.MIN_VALUE;
         int l2 = Integer.MIN_VALUE;
         for (int i=0; i<arr.length;i++){
@@ -10,5 +26,6 @@ public class SL {
             }else if(arr[i]>l2&& arr[i]!=l1) l2=arr[i];
         }
         System.out.println(l2);
+        pArray(arr);
     }
 }
